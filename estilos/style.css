@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
+:root{
+    --cor-primaria:black;
+    --cor-secundaria:white;
+    --cor-terciaria:#22D4FD;
+    --texto-primario:'Krona One', sans-serif;
+    --texto-secundario:'Montserrat', sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,8 +16,8 @@
 }
 
 body{
-    background-color: black;
-    color: white;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
     display: flex;
     flex-direction: column;
     gap: 80px;
@@ -17,15 +25,14 @@ body{
 
 header{
     height: 80px;
+
 }
 
 .links{
-    width: 68%;
-    justify-content: center;
     a{
-        color: #22D4FD;
+        color: var(--cor-terciaria);
     }
-    padding: 80px;
+    padding: 4% 0% 0% 15%;
     display: flex;
     gap: 80px;
 }
@@ -34,16 +41,15 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 4% 15%;
+    gap: 82px;
 }
 
 .esquerdo{
     width: 593px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 90px;
-    gap: 50px;
+    gap: 40px;
 }
 
 .redes-sociais{
@@ -54,7 +60,7 @@ main{
     
     a{
         display: flex;
-        border: 2px solid #22D4FD;
+        border: 2px solid var(--cor-terciaria);
         width: 378px;
         height: 68px;
         border-radius: 8px;
@@ -62,33 +68,38 @@ main{
         gap: 16px;
         justify-content: center;
     }
+    a:hover{
+        background-color: var(--cor-secundaria);
+        color: var(--cor-primaria);
+    }
     gap: 32px;
 }
 
+
 a{
     text-decoration: none;
-    color: white;
+    color: var(--cor-secundaria);
 }
 
 strong{
-    color: #22D4FD;
+    color: var(--cor-terciaria);
 }
 
 .principal{
-    font-family: 'Krona One', sans-serif;
+    font-family: var(--texto-primario);
     font-weight: 400;
 }
 .secundario{
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--texto-secundario);
     font-size: 24px;
 }
 
 footer{
-    background-color: #22D4FD;
+    background-color: var(--cor-terciaria);
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 400;
-    color: black;
+    color: var(--cor-primaria);
 }
